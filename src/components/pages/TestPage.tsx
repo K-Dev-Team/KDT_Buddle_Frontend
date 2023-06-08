@@ -1,15 +1,18 @@
-import React from 'react'
-import { useStore } from "../../store"; 
+import React from 'react';
+
+import { useStore } from '../store/store';
 
 function TestPage() {
-    const { selectContent, setSelectContent } = useStore();
+  const { selectContent, setSelectContent } = useStore();
   return (
     <div>
-        <h3>testPage</h3>
-        <div>{selectContent}</div>
-        <button onClick={ () => setSelectContent(selectContent + 1 )}> 더하기버튼 </button>        
+      <h3>testPage</h3>
+      <div>{selectContent}</div>
+      <button type="button" onClick={() => setSelectContent(selectContent + 1)}>
+        더하기버튼
+      </button>
     </div>
-  )
+  );
 }
 
-export default TestPage
+export default TestPage;
