@@ -13,13 +13,11 @@ const useBearStore = create((set) => ({
 }));
 
 export const useTests = () => {
-  const bears = useBearStore((state: any) => {
-    return {
-      state: state.bears,
-      increase: state.increasePopulation,
-      remove: state.removeAllBears,
-    };
-  });
+  const bears = useBearStore((state: any) => ({
+    state: state.bears,
+    increase: state.increasePopulation,
+    remove: state.removeAllBears,
+  }));
 
   return {
     bears,

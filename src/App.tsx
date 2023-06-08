@@ -1,29 +1,22 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import TestPage from "./components/pages/TestPage";
-import Navigation from "./components/templates/Navigation";
-import { useTests } from "./components/store/useMain";
+import React from 'react';
+import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const App: React.FC = () => {
-  const useTest: any = useTests();
-  return (
-    <div className="App">
-      <BrowserRouter>
-        Hello Typescript!
-        <div>
-          Store Test
-          {useTest.bears.state}
-          <button onClick={useTest.bears.increase}>plus</button>
-          <button onClick={useTest.bears.remove}>remove</button>
-        </div>
-        <Navigation />
-        <Routes>
-          <Route path="/testPage" element={<TestPage />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-};
+import TestBear from './components/pages/TestBear';
+import TestPage from './components/pages/TestPage';
+import Navigation from './components/templates/Navigation';
+
+const App: React.FC = () => (
+  <div className="App">
+    <BrowserRouter>
+      Hello Typescript!
+      <Navigation />
+      <Routes>
+        <Route path="/testPage" element={<TestPage />} />
+        <Route path="/testBear" element={<TestBear />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
+);
 
 export default App;
