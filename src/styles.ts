@@ -1,10 +1,11 @@
 const color = {
-    white: "white",
-    black: "black",
+  white: "white",
+  black: "black",
 }
 
 export const theme = {
-    color,
+  color,
 };
 
 export type Theme = typeof theme;
+// 수정 필요
