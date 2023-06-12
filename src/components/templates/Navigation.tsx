@@ -7,9 +7,18 @@ function Navigation() {
   return (
     <>
       <div>Navigation</div>
-      <Link to="/"><Linked>Home</Linked></Link>
-      <Link to="/testPage"><Linked>go testPage</Linked></Link>
-      <Link to="/testBear"><Linked>go testBear to SCJ</Linked></Link>
+      <Link to="/">
+        <Linked>Home</Linked>
+      </Link>
+      <Link to="/testPage">
+        <Linked>go testPage</Linked>
+      </Link>
+      <Link to="/testBear">
+        <Linked>go testBear to SCJ</Linked>
+      </Link>
+      <Link to="/testButton">
+        <Linked>go Button</Linked>
+      </Link>
     </>
   );
 }
