@@ -8436,6 +8436,11 @@
   dependencies:
     "minimist" "^1.2.6"
 
+"mobx@^6.9.0":
+  "integrity" "sha512-HdKewQEREEJgsWnErClfbFoVebze6rGazxFLU/XUyrII8dORfVszN1V0BMRnQSzcgsNNtkX8DHj3nC6cdWE9YQ=="
+  "resolved" "https://registry.npmjs.org/mobx/-/mobx-6.9.0.tgz"
+  "version" "6.9.0"
+
 "move-concurrently@^1.0.1":
   "integrity" "sha512-hdrFxZOycD/g6A6SoI2bB5NA/5NEqD0569+S47WZhPvm46sD50ZHdYaFmnua5lndde9rCHGjmfK7Z8BuCt/PcQ=="
   "resolved" "https://registry.npmjs.org/move-concurrently/-/move-concurrently-1.0.1.tgz"
