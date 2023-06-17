@@ -6,6 +6,7 @@ import TestBear from './components/pages/TestBear';
 import TestPage from './components/pages/TestPage';
 import Navigation from './components/templates/Navigation';
 import TestButton from './components/pages/TestButton';
+import TestMobx from './components/pages/TestMobx';
 
 const App: React.FC = () => (
   <div className="App">
@@ -16,6 +17,7 @@ const App: React.FC = () => (
         <Route path="/testPage" element={<TestPage />} />
         <Route path="/testBear" element={<TestBear />} />
         <Route path="/testButton" element={<TestButton />} />
+        <Route path="/testMobx" element={<TestMobx />} />
       </Routes>
     </BrowserRouter>
   </div>

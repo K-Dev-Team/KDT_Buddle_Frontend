@@ -19,6 +19,9 @@ function Navigation() {
       <Link to="/testButton">
         <Linked>go Button</Linked>
       </Link>
+      <Link to="/testMobx">
+        <Linked>go Mobx</Linked>
+      </Link>
     </>
   );
 }
