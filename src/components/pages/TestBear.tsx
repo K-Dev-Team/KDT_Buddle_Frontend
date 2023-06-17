@@ -1,17 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import { useTests } from '../store/useMain';
+import { useBearStore, useTests } from '../store/TestZustand_Store';
 
 function TestBear() {
-  const useTest: any = useTests();
+  const useTest: any = useBearStore();
+  console.log(useTest);
   return (
     <div>
       Store Test
-      {useTest.bears.state}
-      <button type="button" onClick={useTest.bears.increase}>plus</button>
-      <button type="button" onClick={useTest.bears.remove}>remove</button>
+      {useTest.bears}
+      <button type="button" onClick={useTest.increasePopulation}>
+        plus
+      </button>
+      <button type="button" onClick={useTest.removeAllBears}>
+        remove
+      </button>
     </div>
   );
-};
+}
 
 export default TestBear;
