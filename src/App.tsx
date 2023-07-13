@@ -3,10 +3,11 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import TestBear from './components/pages/TestBear';
-import TestPage from './components/pages/TestPage';
+
 import Navigation from './components/templates/Navigation';
 import TestButton from './components/pages/TestButton';
 import TestMobx from './components/pages/TestMobx';
+import TestRedux from './components/pages/TestRedux';
 
 const App: React.FC = () => (
   <div className="App">
@@ -14,10 +15,10 @@ const App: React.FC = () => (
       Hello Typescript!
       <Navigation />
       <Routes>
-        <Route path="/testPage" element={<TestPage />} />
         <Route path="/testBear" element={<TestBear />} />
         <Route path="/testButton" element={<TestButton />} />
         <Route path="/testMobx" element={<TestMobx />} />
+        <Route path="/testRedux" element={<TestRedux />} />
       </Routes>
     </BrowserRouter>
   </div>
