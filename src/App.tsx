@@ -15,7 +15,7 @@ const App: React.FC = () => (
     <AppLayout>
       <LayoutBox>
         <BrowserRouter>
-      Hello Typescript!
+          buddle
           <Navigation />
           <Routes>
             <Route path="/testBear" element={<TestBear />} />
