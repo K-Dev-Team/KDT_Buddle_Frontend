@@ -9,19 +9,17 @@ import TestRedux from './components/pages/TestRedux';
 import Navigation from './components/templates/Navigation';
 import AppLayout from './styles/Layout';
 import LayoutBox from './styles/LayoutBox';
+import HomeButton from './components/common/HomeButton';
+import HomeHeader from './components/home/HomeHeader';
 
 const App: React.FC = () => (
   <div className="App">
     <AppLayout>
       <LayoutBox>
         <BrowserRouter>
-          buddle
-          <Navigation />
+          <HomeHeader />
           <Routes>
             <Route path="/testBear" element={<TestBear />} />
-            <Route path="/testButton" element={<TestButton />} />
-            <Route path="/testMobx" element={<TestMobx />} />
-            <Route path="/testRedux" element={<TestRedux />} />
           </Routes>
         </BrowserRouter>
       </LayoutBox>
