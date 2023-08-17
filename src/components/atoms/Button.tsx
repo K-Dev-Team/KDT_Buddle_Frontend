@@ -43,16 +43,14 @@ const ButtonStyle = styled.button<{ width?: number; height?: number; dataColor?:
 
 export default function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement> & Props) {
   return (
-    <>
-      <ButtonStyle
-        width={props.width}
-        height={props.height}
-        onClick={props.onClick}
-        disabled={props.disabled}
-        dataColor={props.color}
-      >
-        {props.children}
-      </ButtonStyle>
-    </>
+    <ButtonStyle
+      width={props.width}
+      height={props.height}
+      onClick={props.onClick}
+      disabled={props.disabled}
+      dataColor={props.color}
+    >
+      {props.children}
+    </ButtonStyle>
   );
 }

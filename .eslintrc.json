@@ -19,7 +19,7 @@
   },
   "rules": {
     "camelcase": "off",
-    "no-console": ["error", { "allow": ["assert"] }],
+    "no-console": ["warn", { "allow": ["assert"] }],
     "no-unused-vars": "off",
     "no-alert": "off",
     "linebreak-style": "off",
@@ -72,6 +72,7 @@
         ]
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "arrow-body-style": "off",
   }
 }
