@@ -1,7 +1,8 @@
 import React from 'react';
-import HomeButton from '../common/HomeButton';
 import styled from 'styled-components';
+
 import searchIcon from '../../icons/searchIcon.svg';
+import HomeButton from '../common/HomeButton';
 
 const HomeHeaderStyle = styled.div`
   width: 360px;
