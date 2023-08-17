@@ -22,6 +22,9 @@ function Navigation() {
       <Link to="/testMobx">
         <Linked>go Mobx</Linked>
       </Link>
+      <Link to="/testRedux">
+        <Linked>go Redux</Linked>
+      </Link>
     </>
   );
 }
