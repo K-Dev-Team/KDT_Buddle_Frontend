@@ -1,6 +1,5 @@
-import { makeObservable, observable, computed, action, flow } from 'mobx';
+import { makeObservable, observable, computed, action, flow , makeAutoObservable } from 'mobx';
 
-import { makeAutoObservable } from 'mobx';
 
 function createDoubler(value: number) {
   return makeAutoObservable({
@@ -16,8 +15,6 @@ function createDoubler(value: number) {
 
 export const doubler = createDoubler(0);
 
-export const TestMobx_Store = () => {
-  return {
-    doubler,
-  };
-};
+export const TestMobx_Store = () => ({
+  doubler,
+});

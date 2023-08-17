@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from '../store';
+
 import { useAppSelector } from '../hooks';
+
+import type { RootState } from '../store';
 
 interface CounterState {
   value: number;
@@ -29,7 +31,7 @@ export const TestRedux_Store = createSlice({
 
 // 상태
 const states = (state: RootState) => state.TestRedux_Store.value;
-const actions = TestRedux_Store.actions;
+const {actions} = TestRedux_Store;
 
 export const TestReduxObject = () => {
   // 셀렉터 훅을 사용해서 상태값을 넣어줘야함
