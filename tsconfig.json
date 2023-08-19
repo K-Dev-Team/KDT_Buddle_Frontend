@@ -4,6 +4,10 @@
     "target": "ES5",
     "jsx": "preserve",
     "module": "esnext",
+    "types": [
+      "react",
+      "react-dom",
+    ],
     "sourceMap": true,
     "removeComments": true,
     "esModuleInterop": true,
