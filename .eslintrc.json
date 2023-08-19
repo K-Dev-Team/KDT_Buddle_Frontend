@@ -11,6 +11,10 @@
       "typescript": {}
     }
   },
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "rules": {
     "camelcase": "off",
     "no-console": ["warn", { "allow": ["assert"] }],
