@@ -17,21 +17,25 @@ export const TestRedux_Store = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      state.value += 1;
+      const statement = state;
+      statement.value += 1;
     },
     decrement: (state) => {
-      state.value -= 1;
+      const statement = state;
+
+      statement.value -= 1;
     },
     // Use the PayloadAction type to declare the contents of `action.payload`
     incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+      const statement = state;
+      statement.value += action.payload;
     },
   },
 });
 
 // 상태
 const states = (state: RootState) => state.TestRedux_Store.value;
-const {actions} = TestRedux_Store;
+const { actions } = TestRedux_Store;
 
 export const TestReduxObject = () => {
   // 셀렉터 훅을 사용해서 상태값을 넣어줘야함
