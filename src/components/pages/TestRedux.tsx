@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../atoms/Button';
+import Button from '../common/Button';
 import { useAppDispatch } from '../hooks';
 import { TestReduxObject } from '../reducer/TestRedux_Store';
 

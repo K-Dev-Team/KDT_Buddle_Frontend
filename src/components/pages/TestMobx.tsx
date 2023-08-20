@@ -1,7 +1,7 @@
 import { action } from 'mobx';
 import React from 'react';
 
-import Button from '../atoms/Button';
+import Button from '../common/Button';
 import { TestMobx_Store, doubler } from '../store/TestMobx_Store';
 
 const TestMobx = () => {
