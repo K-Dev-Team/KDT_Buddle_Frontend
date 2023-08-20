@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export const Linked = styled.a`
-  padding: 2rem;
+export const Linked = styled.p`
   color: red;
   text-decoration: none;
 `
