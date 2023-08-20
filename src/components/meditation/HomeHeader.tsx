@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import searchIcon from '../../icons/searchIcon.svg';
 import HomeButton from '../common/HomeButton';
 
 const HomeHeaderStyle = styled.div`
@@ -34,15 +33,6 @@ const HomeSubjectTextStyle = styled.div`
 function HomeHeader() {
   return (
     <HomeHeaderStyle>
-      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-        <HomeButton />
-        <img
-          src={searchIcon}
-          className="searchIcon"
-          alt="searchIcon"
-          style={{ width: '24px', height: '24px', flexShrink: 0 }}
-        />
-      </div>
       <HomeSubjectStyle>
         <HomeSubjectTextStyle>매주 새롭게 사색할만한 주제를 확인해보세요</HomeSubjectTextStyle>
       </HomeSubjectStyle>
