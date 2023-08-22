@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HomeButton from '../common/HomeButton';
-
 const HomeHeaderStyle = styled.div`
   width: 360px;
   height: 245px;
@@ -19,8 +17,6 @@ const HomeSubjectStyle = styled.div`
 
 const HomeSubjectTextStyle = styled.div`
   color: #000;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Pretendard;
   font-size: 22px;
   font-style: normal;

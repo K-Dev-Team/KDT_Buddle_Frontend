@@ -1,7 +1,7 @@
 import React from 'react';
 
 import HomeButton from './HomeButton';
-import searchIcon from '../../icons/searchIcon.svg';
+import searchIcon from '../../icons/searchIcon.jpg';
 
 const HeaderBar = () => {
   return (
