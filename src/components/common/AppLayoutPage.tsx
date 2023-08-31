@@ -9,7 +9,7 @@ const AppLayoutPage = () => {
   return (
     <AppLayout>
       <LayoutBox>
-        <HeaderBar />
+        {/* <HeaderBar /> */}
         <Routing />
       </LayoutBox>
     </AppLayout>

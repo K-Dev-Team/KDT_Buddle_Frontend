@@ -1,18 +1,13 @@
 import React from 'react';
-
 import HomeButton from './HomeButton';
-import searchIcon from '../../icons/searchIcon.jpg';
+import { searchImage } from './images/imageComponents';
 
 const HeaderBar = () => {
+  const search = searchImage();
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', margin: '55px 20px 0 20px' }}>
       <HomeButton />
-      <img
-        src={searchIcon}
-        className="searchIcon"
-        alt="searchIcon"
-        style={{ width: '24px', height: '24px', flexShrink: 0 }}
-      />
+      <div style={{ marginLeft: 'auto' }}>{search}</div>
     </div>
   );
 };

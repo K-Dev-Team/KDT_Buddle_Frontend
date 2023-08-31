@@ -12,7 +12,7 @@ function Navigation() {
     }
   }, [location, navigate]);
   return (
-    <>
+    <div style={{ height: '100px', position: 'fixed', bottom: 120 }}>
       <div>Navigation</div>
       <Link to="/meditation">
         <Linked>한줄사색</Linked>
@@ -26,7 +26,7 @@ function Navigation() {
       <Link to="/mypage">
         <Linked>마이페이지</Linked>
       </Link>
-    </>
+    </div>
   );
 }
 
