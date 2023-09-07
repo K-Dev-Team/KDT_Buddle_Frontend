@@ -15,9 +15,18 @@ const GlobalStyles = createGlobalStyle`
     user-select: text;
   }
   ${({ theme }) => {
+    const { fonts, colors } = theme;
     return css`
       body {
-        font-family: ${theme.fonts.family.base}
+        font-family: ${fonts.family.base};
+        height: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: ${colors.black};
+      }
+      a:visited {
+        color: ${colors.black};
       }
     `;
   }}

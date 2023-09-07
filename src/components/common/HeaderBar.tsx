@@ -1,19 +1,30 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
 
 import HomeButton from './HomeButton';
-import searchIcon from '../../icons/searchIcon.svg';
+import { ReactComponent as SearchIcon} from '../../icons/searchIcon.svg';
 
+const HeaderBarWrap = styled.header`
+${({ theme }) => {
+    const { colors } = theme;
+    return css`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 24px;
+    align-items: center;
+    background-color: ${colors.white};
+  `;
+  }}
+`;
+  
 const HeaderBar = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+    <HeaderBarWrap>
       <HomeButton />
-      <img
-        src={searchIcon}
-        className="searchIcon"
-        alt="searchIcon"
-        style={{ width: '24px', height: '24px', flexShrink: 0 }}
-      />
-    </div>
+      <SearchIcon width="19px" height="19px" />
+    </HeaderBarWrap>
   );
 };
 
