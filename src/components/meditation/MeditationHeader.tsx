@@ -1,26 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import HomeButton from '../common/HomeButton';
+import { useMeditation } from '../store/meditation/Meditation_Store';
 
 const HomeHeaderStyle = styled.div`
-  width: 360px;
-  height: 245px;
-  flex-shrink: 0;
   display: flex;
-  background-color: white;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 170px;
 `;
 
 const HomeSubjectStyle = styled.div`
   display: flex;
-  padding: 42px 157px 42px 0px;
+  width: 320px;
+  padding: 42px 0px;
   align-items: center;
+  gap: 10px;
 `;
 
 const HomeSubjectTextStyle = styled.div`
   color: #000;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Pretendard;
   font-size: 22px;
   font-style: normal;
@@ -30,7 +29,8 @@ const HomeSubjectTextStyle = styled.div`
   height: 82px;
 `;
 
-function HomeHeader() {
+export default function MeditationHeader() {
+  const store = useMeditation();
   return (
     <HomeHeaderStyle>
       <HomeSubjectStyle>
@@ -39,5 +39,3 @@ function HomeHeader() {
     </HomeHeaderStyle>
   );
 }
-
-export default HomeHeader;
