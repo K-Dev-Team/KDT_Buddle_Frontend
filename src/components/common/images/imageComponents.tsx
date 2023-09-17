@@ -1,11 +1,14 @@
 import HeartStraight from '../../../icons/HeartStraight.png';
 import CaretDown from '../../../icons/CaretDown.png';
 import SearchIcon from '../../../icons/SearchIcon.png';
+<<<<<<< HEAD
 import CaretLeft from '../../../icons/CaretLeft.png';
 import CaretRight from '../../../icons/CaretRight.png';
 import ChatCircleText from '../../../icons/ChatCircleText.png';
 import ListBullets from '../../../icons/ListBullets.png';
 import DotsThree from '../../../icons/DotsThree.png';
+=======
+>>>>>>> develop
 
 import React from 'react';
 
@@ -24,6 +27,7 @@ export const downArrowImage = () => {
   return <img src={CaretDown} className="CaretDown" alt="CaretDown" style={{ width: '24px', height: '24px' }} />;
 };
 
+<<<<<<< HEAD
 export const caretLeft = () => {
   return <img src={CaretLeft} className="CaretLeft" alt="CaretLeft" style={{ width: '24px', height: '24px' }} />;
 };
@@ -51,3 +55,8 @@ export const listBullets = () => {
 export const dotsThree = () => {
   return <img src={DotsThree} className="DotsThree" alt="DotsThree" style={{ width: '24px', height: '24px' }} />;
 };
+=======
+export const searchImage = () => {
+  return <img src={SearchIcon} className="SearchIcon" alt="SearchIcon" style={{ width: '24px', height: '24px' }} />;
+};
+>>>>>>> develop

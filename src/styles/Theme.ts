@@ -25,6 +25,7 @@ const fonts = {
   size: {
     base: "15px",
     sm: "14px",
+    xsm: "12px",
     lg: "16px",
     title: "24px",
   },
