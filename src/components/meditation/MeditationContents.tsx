@@ -62,11 +62,7 @@ export default function MeditationContents({ store }: any) {
         <Line2>당신에게 행복이란 무엇인가요?</Line2>
         <Line3>베스트 댓글</Line3>
         <List>
-<<<<<<< HEAD
           <Item onClick={store.actions.goDetail}>
-=======
-          <Item>
->>>>>>> develop
             <span>1</span>여러분의 생각을 한 줄로 남겨주세요 {heart}
           </Item>
           {store.openDetail ? (

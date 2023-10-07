@@ -40,37 +40,16 @@ function Navigation() {
     }
   }, [location, navigate]);
   return (
-<<<<<<< HEAD
-    <div style={{ height: '100px', position: 'fixed', bottom: 120 }}>
-      <div>Navigation</div>
-      <Link to="/meditation">
-        <Linked>한줄사색</Linked>
-      </Link>
-      <Link to="/channel">
-        <Linked>채널</Linked>
-      </Link>
-      <Link to="/activity">
-        <Linked>추천활동</Linked>
-      </Link>
-      <Link to="/mypage">
-        <Linked>마이페이지</Linked>
-      </Link>
-    </div>
-=======
     <NavWrap>
-      {navigationIcons.map(({name, icon, isActive, link}) => (
+      {navigationIcons.map(({ name, icon, isActive, link }) => (
         <Link to={link} key={name}>
           <IconWrap>
-            {location.pathname === link 
-              ? <div>{isActive}</div> 
-              : <div>{icon}</div>
-            }
+            {location.pathname === link ? <div>{isActive}</div> : <div>{icon}</div>}
             <p>{name}</p>
           </IconWrap>
         </Link>
       ))}
     </NavWrap>
->>>>>>> develop
   );
 }
 
