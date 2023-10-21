@@ -10,7 +10,7 @@ import {
 } from '../../common/images/imageComponents';
 
 const HeadContainer = styled.div`
-  width: 360px;
+  width: 320px;
   height: 310px;
   display: flex;
   flex-direction: column;
@@ -41,15 +41,13 @@ const Sub = styled.div`
   padding: 0px 233px 34px 16px;
 `;
 const BodyContainer = styled.div`
-  width: 360px;
+  width: 320px;
   height: 400px;
   background-color: wheat;
 `;
 const Contents = styled.div`
-  width: 328px;
+  width: 300px;
   color: #101010;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
@@ -75,7 +73,7 @@ const CountLike = styled.div`
 const Input = styled.div`
   display: flex;
   flex-direction: row;
-  width: 360px;
+  width: 320px;
   /* padding: 30px 16px; */
   align-items: center;
   border-top: 1px solid #ededed;
@@ -94,16 +92,20 @@ const InputText = styled.div`
 const SubmitButton = styled.div`
   margin-left: auto;
   padding: 22px 16px;
-  /* padding: 10px; */
+  border-radius: 18px;
+  background: #e5e5e5;
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 8px;
 `;
 const ComentContainer = styled.div`
   display: flex;
-  width: 328px;
+  width: 320px;
   padding: 20px 0px;
   align-items: flex-start;
   border-bottom: 1px solid #ededed;
   background: #fff;
-  margin: 0 16px 0 16px;
   padding: 20px 0 20px 0;
   flex-direction: row;
   background-color: pink;
