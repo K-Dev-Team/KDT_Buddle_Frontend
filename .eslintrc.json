@@ -1,0 +1,65 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:@typescript-eslint/recommended", "airbnb", "airbnb-base", "airbnb/hooks", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "no-console": ["warn", { "allow": ["assert"] }],
+    "no-unused-vars": "off",
+    "no-alert": "off",
+    "linebreak-style": "off",
+    "no-underscore-dangle": "off",
+    "dot-notation": "off",
+    "max-len": ["warn", { "code": 120, "ignoreComments": true }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/indent": ["warn", 2],
+    "object-curly-newline": 0,
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": ["jsx"]
+      }
+    ],
+    "import/extensions": ["off"],
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", ["parent", "sibling"], "index", "object", "type"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": ["arrow-function", "function-declaration"]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "arrow-body-style": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}
