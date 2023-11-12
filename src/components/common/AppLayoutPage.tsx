@@ -24,7 +24,6 @@ const AppLayoutPage = () => {
   return (
     <AppLayout>
       <LayoutBox>
-        {/* <HeaderBar /> */}
         <Routing />
       </LayoutBox>
     </AppLayout>
