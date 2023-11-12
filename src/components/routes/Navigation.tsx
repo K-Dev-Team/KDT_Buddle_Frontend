@@ -28,7 +28,6 @@ const IconWrap = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  /* width: 25%; */
 `;
 
 function Navigation() {

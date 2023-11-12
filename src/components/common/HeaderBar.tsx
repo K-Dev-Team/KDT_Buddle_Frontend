@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 import HomeButton from './HomeButton';
 import { searchImage } from './images/imageComponents';
+import { ReactComponent as SearchIcon } from '../../icons/searchIcon.svg';
 
 const HeaderBarWrap = styled.header`
   ${({ theme }) => {
@@ -15,6 +16,7 @@ const HeaderBarWrap = styled.header`
       height: 24px;
       align-items: center;
       background-color: ${colors.white};
+      padding: 22px 0px 17px 0px;
     `;
   }}
 `;
