@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import HeaderBar from './HeaderBar';
 import Routing from '../routes/Routing';
 
 const AppLayout = styled.div`
@@ -24,7 +22,6 @@ const AppLayoutPage = () => {
   return (
     <AppLayout>
       <LayoutBox>
-        {/* <HeaderBar /> */}
         <Routing />
       </LayoutBox>
     </AppLayout>

@@ -28,7 +28,6 @@ const IconWrap = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  /* width: 25%; */
 `;
 
 function Navigation() {
@@ -41,13 +40,10 @@ function Navigation() {
   }, [location, navigate]);
   return (
     <NavWrap>
-      {navigationIcons.map(({name, icon, isActive, link}) => (
+      {navigationIcons.map(({ name, icon, isActive, link }) => (
         <Link to={link} key={name}>
           <IconWrap>
-            {location.pathname === link 
-              ? <div>{isActive}</div> 
-              : <div>{icon}</div>
-            }
+            {location.pathname === link ? <div>{isActive}</div> : <div>{icon}</div>}
             <p>{name}</p>
           </IconWrap>
         </Link>
