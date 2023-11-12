@@ -1,5 +1,5 @@
 #!/bin/sh
 cd ../
 mkdir output
-cp -R ./buddle/* ./output
-cp -R ./output ./buddle/
+cp -R ./buddle_front/* ./output
+cp -R ./output ./buddle_front/
