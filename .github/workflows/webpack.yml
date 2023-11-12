@@ -16,8 +16,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install mustache (to update the date)
-        run: apk add ruby && gem install mustache
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: creates output
         run: sh ./build.sh
       - name: Pushes to another repository
