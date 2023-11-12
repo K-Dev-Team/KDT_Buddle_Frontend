@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HomeButtonStyle = styled.div`
@@ -11,7 +12,11 @@ const HomeButtonStyle = styled.div`
   letter-spacing: 0.34px;
 `;
 function HomeButton() {
-  return <HomeButtonStyle>name</HomeButtonStyle>;
+  return (
+    <HomeButtonStyle>
+      <Link to="/">Buddle</Link>
+    </HomeButtonStyle>
+  );
 }
 
 export default HomeButton;
