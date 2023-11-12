@@ -17,7 +17,7 @@ function HomeButton() {
   const onClickEvent = () => {
     navigate('/');
   };
-  return <HomeButtonStyle onClick={onClickEvent}>name</HomeButtonStyle>;
+  return <HomeButtonStyle onClick={onClickEvent}>buddle</HomeButtonStyle>;
 }
 
 export default HomeButton;

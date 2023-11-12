@@ -47,7 +47,10 @@
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+<<<<<<< HEAD
     "@types/react-transition-group": "^4.4.8",
+=======
+>>>>>>> master
     "@types/styled-components": "^5.1.26",
     "prettier": "^2.8.8"
   }
