@@ -27,7 +27,6 @@ const Channel = () => {
   return (
     <ChannelContainer>
       <ChannelHeader>
-        <HeaderBar />
         <ChannelTitle>모든 이야기 채널을 한번에 살펴볼 수 있어요</ChannelTitle>
       </ChannelHeader>
       <Tabs

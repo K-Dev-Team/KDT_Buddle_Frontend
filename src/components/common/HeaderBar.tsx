@@ -30,7 +30,7 @@ const HeaderBar = () => {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'flex-start',
-        margin: '55px 20px 0 20px',
+        margin: '20px 0px',
       }}
     >
       <HomeButton />

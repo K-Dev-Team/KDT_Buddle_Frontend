@@ -7,6 +7,7 @@ import Channel from '../pages/Channel';
 import Meditation from '../pages/Meditation/index';
 import MyPage from '../pages/MyPage';
 import MeditationDetail from '../pages/Meditation/MeditationDetail';
+import HeaderBar from '../common/HeaderBar';
 
 const Routing = () => {
   return (
