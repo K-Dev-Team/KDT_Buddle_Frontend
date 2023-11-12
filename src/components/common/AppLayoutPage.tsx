@@ -8,11 +8,12 @@ const AppLayout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+  background-color: #efefef;
+`;
 const LayoutBox = styled.div`
   width: 320px;
   height: 100vh;
-  background-color: orange;
+  background-color: white;
   display: flex;
   flex-direction: column;
   padding: 0 20px;
