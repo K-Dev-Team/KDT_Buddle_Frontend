@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import HomeButton from './HomeButton';
+import { searchImage } from './images/imageComponents';
 import { ReactComponent as SearchIcon } from '../../icons/searchIcon.svg';
 
 const HeaderBarWrap = styled.header`
@@ -21,11 +22,20 @@ const HeaderBarWrap = styled.header`
 `;
 
 const HeaderBar = () => {
+  const search = searchImage();
+
   return (
-    <HeaderBarWrap>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        margin: '55px 20px 0 20px',
+      }}
+    >
       <HomeButton />
-      <SearchIcon width="19px" height="19px" />
-    </HeaderBarWrap>
+      <div style={{ marginLeft: 'auto' }}>{search}</div>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HomeButtonStyle = styled.div`
@@ -10,13 +10,14 @@ const HomeButtonStyle = styled.div`
   font-weight: 700;
   line-height: 100%; /* 20px */
   letter-spacing: 0.34px;
+  cursor: pointer;
 `;
 function HomeButton() {
-  return (
-    <HomeButtonStyle>
-      <Link to="/">Buddle</Link>
-    </HomeButtonStyle>
-  );
+  const navigate = useNavigate();
+  const onClickEvent = () => {
+    navigate('/');
+  };
+  return <HomeButtonStyle onClick={onClickEvent}>name</HomeButtonStyle>;
 }
 
 export default HomeButton;
