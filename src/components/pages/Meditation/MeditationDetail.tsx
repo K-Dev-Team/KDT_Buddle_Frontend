@@ -8,6 +8,8 @@ import {
   heartImage,
   listBullets,
 } from '../../common/images/imageComponents';
+import {useMeditation} from '../../store/meditation/Meditation_Store';
+import {Modal} from '../../common/Modal';
 
 const HeadContainer = styled.div`
   width: 320px;
@@ -21,6 +23,7 @@ const DotTree = styled.div`
   padding: 12px 16px 12px 320px;
   justify-content: flex-end;
   align-items: center;
+  cursor: pointer;
 `;
 const Title = styled.div`
   color: #fff;
@@ -118,10 +121,11 @@ export default function MeditationDetail() {
   const list = listBullets();
   const dotTree = dotsThree();
   const heart = heartImage();
+  const store = useMeditation();
   return (
     <div>
       <HeadContainer>
-        <DotTree>{dotTree}</DotTree>
+        <DotTree onClick={store.actions.isSeeMoreDetailModalOpen}>{dotTree}</DotTree>
         <Title>당신에게 행복이란 무엇인가요?</Title>
         <Sub>~월 ~ 째주 한줄사색</Sub>
       </HeadContainer>
@@ -143,13 +147,13 @@ export default function MeditationDetail() {
           <SubmitButton>등록</SubmitButton>
         </Input>
         <ComentContainer>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '305px' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', gap: '6px', alignItems: 'center' }}>
-              <div style={{ width: '24px', height: '24px', backgroundColor: 'yellow' }}>그</div>
+          <div style={{display: 'flex', flexDirection: 'column', gap: '8px', width: '305px'}}>
+            <div style={{display: 'flex', flexDirection: 'row', gap: '6px', alignItems: 'center'}}>
+              <div style={{width: '24px', height: '24px', backgroundColor: 'yellow'}}>그</div>
               <div>닉네임</div>
-              <div style={{ color: '#979797' }}>3시간전</div>
+              <div style={{color: '#979797'}}>3시간전</div>
             </div>
-            <div style={{ marginBottom: '21px' }}>댓글입니다 . 레이아웃 잡기 빡세네요 ... 하 ...</div>
+            <div style={{marginBottom: '21px'}}>댓글입니다 . 레이아웃 잡기 빡세네요 ... 하 ...</div>
             <div
               style={{
                 width: '110px',
@@ -177,6 +181,9 @@ export default function MeditationDetail() {
           <div>{dotTree}</div>
         </ComentContainer>
       </BodyContainer>
+      <Modal isOpen={store.seeMoreDetailModal} close={store.actions.isSeeMoreDetailModalClose} top={100} right={100}>
+        모달테스트
+      </Modal>
     </div>
   );
 }

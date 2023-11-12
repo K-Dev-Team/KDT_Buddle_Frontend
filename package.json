@@ -16,11 +16,7 @@
     "react-transition-group": "^4.4.5",
     "styled-components": "^5.3.11",
     "styled-reset": "^4.5.1",
-<<<<<<< HEAD
-    "typescript": "^4.9.5",
-=======
     "typescript": "^5.1.6",
->>>>>>> origin/develop
     "web-vitals": "^2.1.4",
     "zustand": "^4.3.8"
   },
