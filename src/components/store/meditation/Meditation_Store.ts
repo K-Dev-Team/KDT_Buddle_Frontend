@@ -1,12 +1,13 @@
-import {MouseEvent, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import { MouseEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const useMeditation = () => {
   const [openDetail, setOpenDetail] = useState(false);
   const navi = useNavigate();
   const [seeMoreDetailModal, setSeeMoreDetailModal] = useState(false);
+  const [modalLodation, setModalLodation] = useState({ x: 0, y: 0 });
   // const;
-  const state = {openDetail, seeMoreDetailModal};
+  const state = { openDetail, seeMoreDetailModal, modalLodation };
   const actions = {
     setOpenDetail,
     goDetail: () => {
@@ -14,6 +15,7 @@ export const useMeditation = () => {
     },
     isSeeMoreDetailModalOpen: (e: MouseEvent<HTMLDivElement>) => {
       console.log(e);
+      setModalLodation({ x: e.clientX, y: e.clientY });
       setSeeMoreDetailModal(true);
     },
     isSeeMoreDetailModalClose: () => {
@@ -21,5 +23,5 @@ export const useMeditation = () => {
     },
   };
   const variables = {};
-  return {...state, actions, variables};
+  return { ...state, actions, variables };
 };

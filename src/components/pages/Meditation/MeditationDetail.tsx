@@ -8,8 +8,9 @@ import {
   heartImage,
   listBullets,
 } from '../../common/images/imageComponents';
-import {useMeditation} from '../../store/meditation/Meditation_Store';
-import {Modal} from '../../common/Modal';
+import { useMeditation } from '../../store/meditation/Meditation_Store';
+import { Modal } from '../../common/Modal';
+import { meditationDetailIcons } from '../../../icons/meditationDetailIcons';
 
 const HeadContainer = styled.div`
   width: 320px;
@@ -113,6 +114,16 @@ const ComentContainer = styled.div`
   flex-direction: row;
   background-color: pink;
 `;
+const MinusPlusContainer = styled.div`
+  display: flex;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 15px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+`;
 
 export default function MeditationDetail() {
   const left = caretLeft();
@@ -147,13 +158,13 @@ export default function MeditationDetail() {
           <SubmitButton>등록</SubmitButton>
         </Input>
         <ComentContainer>
-          <div style={{display: 'flex', flexDirection: 'column', gap: '8px', width: '305px'}}>
-            <div style={{display: 'flex', flexDirection: 'row', gap: '6px', alignItems: 'center'}}>
-              <div style={{width: '24px', height: '24px', backgroundColor: 'yellow'}}>그</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', width: '305px' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '6px', alignItems: 'center' }}>
+              <div style={{ width: '24px', height: '24px', backgroundColor: 'yellow' }}>그</div>
               <div>닉네임</div>
-              <div style={{color: '#979797'}}>3시간전</div>
+              <div style={{ color: '#979797' }}>3시간전</div>
             </div>
-            <div style={{marginBottom: '21px'}}>댓글입니다 . 레이아웃 잡기 빡세네요 ... 하 ...</div>
+            <div style={{ marginBottom: '21px' }}>댓글입니다 . 레이아웃 잡기 빡세네요 ... 하 ...</div>
             <div
               style={{
                 width: '110px',
@@ -181,8 +192,32 @@ export default function MeditationDetail() {
           <div>{dotTree}</div>
         </ComentContainer>
       </BodyContainer>
-      <Modal isOpen={store.seeMoreDetailModal} close={store.actions.isSeeMoreDetailModalClose} top={100} right={100}>
-        모달테스트
+      <Modal
+        isOpen={store.seeMoreDetailModal}
+        close={store.actions.isSeeMoreDetailModalClose}
+        top={store.modalLodation.y}
+        left={store.modalLodation.x - 203}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            gap: 5,
+          }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+            <MinusPlusContainer>{meditationDetailIcons.minus.icon}</MinusPlusContainer>
+            <div style={{ margin: '0 19px' }}>작은글씨</div>
+            <MinusPlusContainer>{meditationDetailIcons.plus.icon}</MinusPlusContainer>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {meditationDetailIcons.bookmark.icon}보관함에 추가
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>{meditationDetailIcons.share.icon}공유하기</div>
+        </div>
       </Modal>
     </div>
   );
