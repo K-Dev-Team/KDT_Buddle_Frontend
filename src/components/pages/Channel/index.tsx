@@ -4,31 +4,14 @@ import styled from 'styled-components';
 import Tabs from '../../common/Tabs';
 
 import { Advertisement } from '../../common/Advertisement';
+import * as S from '../../subStyleComponent/channel/channelStyle';
 
-const ChannelContainer = styled.div`
-  /* width1: 360px; */
-`;
-const ChannelHeader = styled.div`
-  width: 100%;
-  height: 210px;
-  flex-shrink: 0;
-  background-color: white;
-`;
-const ChannelTitle = styled.div`
-  color: #000;
-  font-family: Pretendard;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 33px */
-  margin: 37px 136px 61px 18px;
-`;
 const Channel = () => {
   return (
-    <ChannelContainer>
-      <ChannelHeader>
-        <ChannelTitle>모든 이야기 채널을 한번에 살펴볼 수 있어요</ChannelTitle>
-      </ChannelHeader>
+    <S.ChannelContainer>
+      <S.ChannelHeader>
+        <S.ChannelTitle>모든 이야기 채널을 한번에 살펴볼 수 있어요</S.ChannelTitle>
+      </S.ChannelHeader>
       <Tabs
         items={[
           {
@@ -50,7 +33,7 @@ const Channel = () => {
           { key: '3', label: '자유', content: <>자유 컨텐츠</> },
         ]}
       />
-    </ChannelContainer>
+    </S.ChannelContainer>
   );
 };
 

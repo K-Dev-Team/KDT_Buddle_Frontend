@@ -1,9 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-
 import HomeButton from './HomeButton';
-import { searchImage } from './images/imageComponents';
-import { ReactComponent as SearchIcon } from '../../icons/searchIcon.svg';
+import { meditaionIcons } from '../../icons/meditaionIcons';
 
 const HeaderBarWrap = styled.header`
   ${({ theme }) => {
@@ -22,8 +20,6 @@ const HeaderBarWrap = styled.header`
 `;
 
 const HeaderBar = () => {
-  const search = searchImage();
-
   return (
     <div
       style={{
@@ -34,7 +30,7 @@ const HeaderBar = () => {
       }}
     >
       <HomeButton />
-      <div style={{ marginLeft: 'auto' }}>{search}</div>
+      <div style={{ marginLeft: 'auto' }}>{meditaionIcons.magnifier.icon}</div>
     </div>
   );
 };
