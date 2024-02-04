@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ContentsBackground = styled.div`
   width: 100%;
   height: 600px;
-  overflow-y: hidden;
 `;
 export const Line1 = styled.div`
   margin-bottom: 20px;

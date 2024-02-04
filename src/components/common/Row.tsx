@@ -11,7 +11,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   border?: boolean;
 };
 
-const RowStyle = styled.button<Props>`
+const RowStyle = styled.div<Props>`
   display: flex;
   width: 100%;
   justify-content: ${(props) => props.justifyContent || ''};
@@ -31,10 +31,11 @@ export default function Row({
   gap = 5,
   flexGrow,
   border = false,
+  width,
   style,
 }: Props) {
   return (
-    <RowStyle className="row" style={{ flexBasis, gap, alignItems, justifyContent, ...style }}>
+    <RowStyle className="row" style={{ flexBasis, gap, alignItems, justifyContent, width, ...style }}>
       {children}
     </RowStyle>
   );

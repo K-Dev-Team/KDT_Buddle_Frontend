@@ -11,7 +11,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   border?: boolean;
 };
 
-const ColStyle = styled.button<Props>`
+const ColStyle = styled.div<Props>`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -27,13 +27,19 @@ export default function Col({
   width,
   alignItems,
   justifyContent,
-  gap = 5,
+  gap,
   flexGrow,
   border = false,
   style,
+  color,
 }: Props) {
   return (
-    <ColStyle className="col" style={{ flexBasis, gap, justifyContent, alignItems, ...style }}>
+    <ColStyle
+      className="col"
+      style={{ flexBasis, gap, justifyContent, alignItems, width, ...style }}
+      // justifyContent={justifyContent}
+      // alignItems={alignItems}
+    >
       {children}
     </ColStyle>
   );

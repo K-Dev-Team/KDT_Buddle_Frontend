@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const TabsContainer = styled.div`
   width: 100%;
-  height: 100px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -31,7 +31,7 @@ type TabItem = {
   content: React.ReactNode;
 };
 
-type Props = {
+type Props = React.HTMLAttributes<HTMLDivElement> & {
   items: TabItem[];
   onChange?: (key: string) => void;
   //   onBeforeChange?: (nextTab: string, prevTab: string) => boolean | undefined | Promise<boolean | void>;
@@ -56,7 +56,7 @@ function Tabs(props: Props) {
   }, [currentTab]);
 
   return (
-    <TabsContainer>
+    <TabsContainer style={{ ...props.style }}>
       <HeaderStyle ref={headerRef}>
         {items.map((item, index) => (
           <TabStyle

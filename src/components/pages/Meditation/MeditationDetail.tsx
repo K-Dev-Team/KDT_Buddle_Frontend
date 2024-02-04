@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import { Modal } from '../../common/Modal';
 import { meditaionIcons } from '../../../icons/meditaionIcons';
 import { useMeditationDetail } from '../../store/meditation/meditationDetail_Store';
