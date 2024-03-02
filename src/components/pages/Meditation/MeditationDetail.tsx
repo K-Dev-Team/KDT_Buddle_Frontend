@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal } from '../../common/Modal';
 import { meditaionIcons } from '../../../icons/meditaionIcons';
-import { useMeditationDetail } from '../../store/meditation/meditationDetail_Store';
+import { useMeditationDetail } from '../../store/meditation/medi_detail_store';
 import * as S from '../../subStyleComponent/meditation/meditationDetailStyle';
 
 export default function MeditationDetail() {
