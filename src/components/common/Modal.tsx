@@ -1,4 +1,4 @@
-import {CSSTransition} from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   children: React.ReactNode;
   title?: string;
   top?: number;
-  right?: number;
+  left?: number;
 }
 const CloseButton = styled.button`
   position: absolute;
@@ -30,7 +30,7 @@ const CloseButton = styled.button`
     background-color: #9991;
   }
 `;
-const ModalStyle = styled.div<{top?: number; right?: number}>`
+const ModalStyle = styled.div<{ top?: number; left?: number }>`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ const ModalStyle = styled.div<{top?: number; right?: number}>`
   border-radius: 10px;
   padding: 24px;
   top: ${(props) => (props.top ? props.top : '') + 'px'};
-  right: ${(props) => (props.top ? props.right : '') + 'px'};
+  left: ${(props) => (props.top ? props.left : '') + 'px'};
 `;
 const BackdropStyle = styled.div`
   position: fixed;
@@ -54,7 +54,7 @@ const BackdropStyle = styled.div`
   z-index: 40;
 `;
 
-export const Modal = ({isOpen, close, children, title, top, right}: Props) => {
+export const Modal = ({ isOpen, close, children, title, top, left }: Props) => {
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       close();
@@ -66,7 +66,7 @@ export const Modal = ({isOpen, close, children, title, top, right}: Props) => {
 
   return (
     <BackdropStyle onClick={handleBackdropClick}>
-      <ModalStyle top={top} right={right}>
+      <ModalStyle top={top} left={left}>
         {title && <header>{title}</header>}
         <CloseButton className="close-button" onClick={close}>
           &times;

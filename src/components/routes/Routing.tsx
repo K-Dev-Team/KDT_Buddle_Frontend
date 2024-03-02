@@ -13,6 +13,7 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <HeaderBar />
+      
       <Routes>
         <Route index path="/meditation" element={<Meditation />} />
         <Route index path="/meditation/detail" element={<MeditationDetail />} />
