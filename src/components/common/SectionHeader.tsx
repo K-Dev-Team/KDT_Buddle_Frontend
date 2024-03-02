@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useMeditation } from '../store/meditation/Meditation_Store';
+import { useMeditation } from '../store/meditation/meditation_Store';
 
 const HomeHeaderStyle = styled.div`
   display: flex;
